@@ -1,0 +1,547 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+--primarytext: #010000;
+  --secondarytext: #0c0c0c;
+  --border: #beb8b8;
+   --line: #efefef;
+  --primarybg: #8f9e7a;
+  --secondarybg: #cfc9c947;
+  --thirdbg: #b8d07a ;
+  --primaryicon: #0f4a05;
+  --primaryiconhover: #fbfffd;
+  --sectionpadding: 6rem 0;
+  --itemborderradius: 0.7rem;
+    
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto" , sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primarytext);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondarytext);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 90%;
+    }
+}
+
+/* buttons */
+.btn {
+    padding: 1rem 1rem;
+    background: white;
+    border: 1.5px solid var(--border);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px ;
+}
+
+/* titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+    text-align: left;
+}
+.pre-titles {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondarytext);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.pre-titles::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--line);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* logo and nav menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--primarytext);
+
+}
+
+.nav ul li{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav ul li a {
+    color: var(--primarytext);
+
+}
+
+/* burger */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #010000;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+
+}
+
+/* hero section
+ */
+
+#hero {
+     min-height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+     gap: 3rem;
+
+ }
+
+ .hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: .5rem 0 1rem;
+
+ }
+
+ .hero-name span {
+    color: green;
+ }
+.hero-right {
+    right: 15%;
+    justify-self: end;
+    width: min(100%, 400px);
+}
+
+.hero-right img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* services section  */
+
+#services {
+    background-color: var(--secondarybg);
+    padding: var(--sectionpadding);
+}
+
+.services .pre-titles {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+
+}
+
+.services {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var(--primarybg);
+    border-radius: var(--itemborderradius);
+
+}
+
+.services h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon {
+    background: var(--thirdbg);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.service-icon svg {
+    fill: var(--primaryicon);
+}
+
+/* porto section */
+#portofolios {
+    padding : var(--sectionpadding)
+
+}
+
+
+.portofolio {
+    border-radius: var(--itemborderradius);
+    overflow: hidden;
+
+}
+
+
+.portofolio-cover {
+    height: 250px;
+}
+
+.portofolio-cover img {
+    width: 100%;
+    height: 100%;
+  object-fit:cover;
+}
+
+.portofolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.portofolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+
+}
+
+.portofolio-title a svg:hover{
+    fill: var(--primaryicon);
+}
+
+.portofolio-title a svg {
+    transition: 0.2s ease-in-out;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem ;
+
+}
+
+.portofolio-tags div {
+    font-size: .9rem;
+    border: 1px solid var(--border);
+    padding: .35rem .6rem;
+    color: var(--secondarytext);
+}
+
+#skills {
+    padding: var(--sectionpadding);
+    background: var(--secondarybg);
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line {
+    padding: 0 .7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--border);
+    position: relative;
+}
+
+.education-info p {
+    margin: 0.6rem 0 1.4rem;
+
+}
+
+.education-years {
+    margin-bottom: 3rem;
+}
+
+.education .line div:before {
+    content: ;
+    width: 15px;
+    height: 15px;
+    background: var(--border);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+
+#contact {
+    padding: var(--sectionpadding);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit minmax(350px, 1ft));
+    gap: 3rem;
+}
+
+
+.contact-form div {
+    margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: .75rem 1.3rem;
+    font-family:"Roboto", sans-serif;
+    background: var(--secondarybg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #beb8b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    min-height: 3rem;
+    background-color: var(--thirdbg);
+    color: var(--primaryicon);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover{
+    background: rgb(68, 143, 68);
+}
+
+.contact-item-icon{
+    background: var(--thirdbg);
+    width: 53px;
+    height: 53px;
+
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--primaryicon);
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+footer {
+    padding: 4rem 0;
+    background: var(--secondarybg);
+    text-align: center;
+    font-color: var(--secondarytext);
+
+}
+
+/* responsive layout */
+@media screen and (max-width: 768px) {
+    :root {
+        --sectionpadding: 4rem 0;
+    }
+
+    .nav {
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    .nav ul {
+        gap: 1.25rem;
+    }
+
+    #hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    .hero-left .pre-titles {
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+
+    .hero-right {
+        justify-self: center;
+        width: min(75vw, 320px);
+    }
+
+    .grid-3,
+    .skills-grid,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .services {
+        padding: 2rem 1rem;
+    }
+
+    .portofolio-cover {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .portofolio-info {
+        padding: 1.5rem 1rem;
+    }
+
+    .portofolio-title {
+        text-align: left;
+    }
+
+    .portofolio-tags {
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin: 1rem 0 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container {
+        width: calc(100% - 2rem);
+    }
+
+    .nav {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .nav ul {
+        gap: .8rem;
+        font-size: .85rem;
+    }
+
+    .pre-titles {
+        letter-spacing: .25rem;
+        padding-left: 30px;
+        font-size: .75rem;
+    }
+
+    .pre-titles::before {
+        width: 22px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: .95rem;
+        line-height: 1.7rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-right {
+        width: min(80vw, 280px);
+    }
+}
